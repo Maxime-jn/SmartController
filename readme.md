@@ -21,3 +21,6 @@ Essaie de diffusion de video avi depuis le vlc du raspberry et de la récupérer
 
 commande pour diffuser en http:
 cvlc /chemin/vers/video.avi --sout '#http{mux=ts,dst=:8080/}' --sout-all --sout-keep
+
+https://www.aranacorp.com/fr/configurer-un-raspberry-pi-en-point-dacces-wifi/
+
