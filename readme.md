@@ -30,6 +30,8 @@ On a crée un point d'accès Wi-Fi sur Raspberry Pi 4.
 Tout marche mais par contre impossible de s'y connecter. 
 le réseau de déconecte au bous de 5 secondes
 
+Nom réseau : Rasp
+MDP : secret1234
 
 
 Au lieu d'utiliser du http on essaie le rtp avec la commande suivante pour diffcuser depuis la raspberry en ligne de commande:
