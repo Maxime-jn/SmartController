@@ -25,6 +25,13 @@ https://www.aranacorp.com/fr/configurer-un-raspberry-pi-en-point-dacces-wifi/
 
 #### **03.02.2025**  
 
+La connexion au raspberry avec une connexion ssh marche.
+On a crée un point d'accès Wi-Fi sur Raspberry Pi 4.
+Tout marche mais par contre impossible de s'y connecter. 
+le réseau de déconecte au bous de 5 secondes
+
+
+
 Au lieu d'utiliser du http on essaie le rtp avec la commande suivante pour diffcuser depuis la raspberry en ligne de commande:
 
 cvlc -vvv video.avi --sout '#rtp{dst=239.255.255.250,port=5004,mux=ts}'
