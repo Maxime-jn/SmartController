@@ -1,0 +1,11 @@
+Au lieu d'utiliser du http on essaie le rtp avec la commande suivante pour diffcuser depuis la raspberry en ligne de commande:
+
+cvlc -vvv video.avi --sout '#rtp{dst=239.255.255.250,port=5004,mux=ts}'
+
+la commande ne marche pas car l’adresse 239.255.255.250 est réservée pour SSDP (Service Discovery Protocol) donc on essaie la suivante :
+
+cvlc -vvv video.avi --sout '#rtp{dst=239.255.12.42,port=5004,mux=ts}'
+
+Ca fonctionne et on arrive à recuperer le flux sur vlc avec rtp://239.255.12.42:5004
+
+On peut aussi voir le flux sur Wireshark en continue
