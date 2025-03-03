@@ -46,4 +46,14 @@ Ca fonctionne et on arrive à recuperer le flux sur vlc avec rtp://239.255.12.42
 
 On peut aussi voir le flux sur Wireshark en continue
 
+#### **10.02.2025**  
 
+Création et recherche pour l'application pour controller le rasberry à distance
+
+#### **17.02.2025**  
+
+Cours sur le projet led
+
+#### **03.03.2025**  
+
+Avancé sur la PWA qui controle le raspberry à distance
