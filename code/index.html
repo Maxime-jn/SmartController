@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrôleur de Voiture</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+            padding: 20px;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #camera {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            width: 600px;
+            background-color: #000;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #camera img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contrôleur de Voiture</h1>
+    <main>
+        <div id="controls">
+            <button onclick="sendCommand('forward')">Avancer</button>
+            <button onclick="sendCommand('backward')">Reculer</button>
+            <button onclick="sendCommand('left')">Gauche</button>
+            <button onclick="sendCommand('right')">Droite</button>
+            <button onclick="sendCommand('stop')">Arrêter</button>
+        </div>
+        <div id="camera">
+            <img id="cameraFeed" src="http://raspberrypi.local:8080/stream" alt="Flux de la caméra">
+        </div>
+    </main>
+    <script>
+        function sendCommand(command) {
+            fetch(`http://raspberrypi.local:5000/control?command=${command}`)
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Erreur:', error));
+        }
+    </script>
+</body>
+
+</html>
