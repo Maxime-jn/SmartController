@@ -89,13 +89,13 @@
             </form>
         </div>
         <div id="camera">
-            <img id="cameraFeed" src="http://raspberrypi.local:8080/stream" alt="Flux de la caméra">
+            <img id="cameraFeed" src="http://192.168.10.1:8080/stream" alt="Flux de la caméra">
         </div>
     </main>
     <script>
         function refreshCameraFeed() {
             const cameraFeed = document.getElementById('cameraFeed');
-            cameraFeed.src = `http://raspberrypi.local:8080/stream?${new Date().getTime()}`;
+            cameraFeed.src = `http://192.168.10.1:8080/stream?${new Date().getTime()}`;
         }
 
         setInterval(refreshCameraFeed, 1000); // Actualiser toutes les secondes

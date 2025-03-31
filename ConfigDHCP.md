@@ -74,6 +74,7 @@ journalctl -f
 ```sh
 sudo systemctl start hostapd
 sudo systemctl status hostapd
+
 ```
 
 ## 8. Activation du DHCP au démarrage
