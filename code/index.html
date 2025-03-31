@@ -80,23 +80,25 @@
     <h1>Contrôleur de Voiture</h1>
     <main>
         <div id="controls">
-            <button onclick="sendCommand('forward')">Avancer</button>
-            <button onclick="sendCommand('backward')">Reculer</button>
-            <button onclick="sendCommand('left')">Gauche</button>
-            <button onclick="sendCommand('right')">Droite</button>
-            <button onclick="sendCommand('stop')">Arrêter</button>
+            <form action="sendCommand.php" method="post">
+                <button type="submit" name="command" value="forward">Avancer</button>
+                <button type="submit" name="command" value="backward">Reculer</button>
+                <button type="submit" name="command" value="left">Gauche</button>
+                <button type="submit" name="command" value="right">Droite</button>
+                <button type="submit" name="command" value="stop">Arrêter</button>
+            </form>
         </div>
         <div id="camera">
             <img id="cameraFeed" src="http://raspberrypi.local:8080/stream" alt="Flux de la caméra">
         </div>
     </main>
     <script>
-        function sendCommand(command) {
-            fetch(`http://raspberrypi.local:5000/control?command=${command}`)
-                .then(response => response.json())
-                .then(data => console.log(data))
-                .catch(error => console.error('Erreur:', error));
+        function refreshCameraFeed() {
+            const cameraFeed = document.getElementById('cameraFeed');
+            cameraFeed.src = `http://raspberrypi.local:8080/stream?${new Date().getTime()}`;
         }
+
+        setInterval(refreshCameraFeed, 1000); // Actualiser toutes les secondes
     </script>
 </body>
 
