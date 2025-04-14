@@ -1,1 +1,9 @@
+Powershell:
+
+.\vlc.exe tcp/h264://10.5.57.116:8494
+
+Raspberry terminal:
+
+libcamera-vid -t0 --width 640 --height 480 --framerate 5 -b 100 --nopreview --codec h264 --profile high --low-latency --intra 5 --listen -o tcp://0.0.0.0:8494
+
 
