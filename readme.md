@@ -57,3 +57,7 @@ Cours sur le projet led
 #### **03.03.2025**  
 
 Avancé sur la PWA qui controle le raspberry à distance
+
+#### **14.04.2025**  
+
+Avancé sur la recherche et la caméra, elle fonctionne il suffit de la relier à notre application
