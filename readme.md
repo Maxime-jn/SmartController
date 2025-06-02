@@ -61,3 +61,23 @@ Avancé sur la PWA qui controle le raspberry à distance
 #### **14.04.2025**  
 
 Avancé sur la recherche et la caméra, elle fonctionne il suffit de la relier à notre application
+
+#### **05.05.2025**  
+
+
+#### **12.05.2025**  
+
+
+#### **19.05.2025**  
+
+
+#### **26.05.2025**  
+
+
+#### **02.06.2025**  
+
+
+
+
+
+
