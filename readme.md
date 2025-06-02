@@ -62,20 +62,22 @@ Avancé sur la PWA qui controle le raspberry à distance
 
 Avancé sur la recherche et la caméra, elle fonctionne il suffit de la relier à notre application
 
-#### **05.05.2025**  
-
-
 #### **12.05.2025**  
+
+Avancé sur notre application avec les différents boutons pour deplacer la voiture
 
 
 #### **19.05.2025**  
 
+Recherche sur un nouveau système pour le stream de la caméra car l'ancien système n'est plus opérationnel 
 
 #### **26.05.2025**  
 
+Utilisation de mediamtx et essaie d'insertion sur notre application mais impossible du au format rtsp
 
 #### **02.06.2025**  
 
+Changement du format au format WebRTC
 
 
 
