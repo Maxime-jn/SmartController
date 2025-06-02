@@ -89,13 +89,13 @@
             </form>
         </div>
         <div id="camera">
-            <video id="cameraFeed" src="http://10.5.57.116:8494/stream" alt="Flux de la caméra">
+            <video id="cameraFeed" src="http://10.5.57.116:8888/mycam.m3u8" alt="Flux de la caméra">
         </div>
     </main>
     <script>
         function refreshCameraFeed() {
             const cameraFeed = document.getElementById('cameraFeed');
-            cameraFeed.src = `http://10.5.57.116:8494/stream?${new Date().getTime()}`;
+            cameraFeed.src = `http://10.5.57.116:8888/mycam.m3u8"?${new Date().getTime()}`;
         }
 
         setInterval(refreshCameraFeed, 1000); // Actualiser toutes les secondes
