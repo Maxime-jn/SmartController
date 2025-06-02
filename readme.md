@@ -77,7 +77,7 @@ Utilisation de mediamtx et essaie d'insertion sur notre application mais impossi
 
 #### **02.06.2025**  
 
-Changement du format au format WebRTC
+Changement du format au format HLS compatible directement avec notre application sans besoin de transformation 
 
 
 
